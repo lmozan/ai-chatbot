@@ -1,0 +1,77 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <defs>
+    <radialGradient id="glowGrad" cx="50%" cy="60%" r="50%">
+      <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#00d4ff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00d4ff"/>
+      <stop offset="60%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+    <linearGradient id="bellyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#7dd3fc"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background glow -->
+  <ellipse cx="100" cy="125" rx="80" ry="55" fill="url(#glowGrad)"/>
+
+  <!-- Water spout drops -->
+  <ellipse cx="62" cy="32" rx="3" ry="5" fill="#00d4ff" opacity="0.5" filter="url(#glow)"/>
+  <ellipse cx="72" cy="20" rx="2.5" ry="4" fill="#00d4ff" opacity="0.4" filter="url(#glow)"/>
+  <ellipse cx="80" cy="10" rx="2" ry="3.5" fill="#00d4ff" opacity="0.3"/>
+
+  <!-- Spout streams -->
+  <path d="M70 55 Q65 38 62 30" stroke="#00d4ff" stroke-width="2.5" stroke-linecap="round" opacity="0.6" filter="url(#glow)"/>
+  <path d="M70 55 Q73 36 73 20" stroke="#22e5ff" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+  <path d="M70 55 Q78 38 80 10" stroke="#00d4ff" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+
+  <!-- Tail fin -->
+  <path d="M168 120 Q190 100 198 108 Q192 122 198 136 Q190 142 168 122 Z" fill="#0369a1" opacity="0.9"/>
+  <path d="M168 121 Q185 108 192 114" stroke="#00d4ff" stroke-width="1" opacity="0.4" fill="none"/>
+
+  <!-- Main body -->
+  <ellipse cx="105" cy="122" rx="72" ry="44" fill="url(#bodyGrad)"/>
+
+  <!-- Belly highlight -->
+  <ellipse cx="88" cy="132" rx="46" ry="22" fill="url(#bellyGrad)" opacity="0.35"/>
+
+  <!-- Body shine -->
+  <ellipse cx="80" cy="100" rx="28" ry="12" fill="white" opacity="0.07" transform="rotate(-15 80 100)"/>
+
+  <!-- Dorsal fin -->
+  <path d="M115 78 Q122 55 135 70 Q125 78 115 78 Z" fill="#0369a1"/>
+  <path d="M115 78 Q121 60 130 68" stroke="#00d4ff" stroke-width="1" opacity="0.3" fill="none"/>
+
+  <!-- Left pectoral fin -->
+  <path d="M88 132 Q72 152 88 158 Q100 148 95 132 Z" fill="#0369a1" opacity="0.85"/>
+
+  <!-- Blowhole -->
+  <ellipse cx="70" cy="58" rx="6" ry="3.5" fill="#0369a1"/>
+  <ellipse cx="70" cy="57" rx="4" ry="2" fill="#004080"/>
+
+  <!-- Eye -->
+  <circle cx="60" cy="112" r="8" fill="#001a33"/>
+  <circle cx="58" cy="110" r="3.5" fill="white" opacity="0.9"/>
+  <circle cx="57" cy="109" r="1.5" fill="#001a33"/>
+  <circle cx="64" cy="108" r="1" fill="white" opacity="0.6"/>
+
+  <!-- Smile -->
+  <path d="M64 124 Q78 136 95 126" stroke="#001a33" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Skin texture lines -->
+  <path d="M90 88 Q100 92 108 88" stroke="white" stroke-width="0.8" opacity="0.1" fill="none"/>
+  <path d="M120 95 Q132 99 140 95" stroke="white" stroke-width="0.8" opacity="0.1" fill="none"/>
+
+  <!-- Neon outline glow on body edge -->
+  <ellipse cx="105" cy="122" rx="72" ry="44" stroke="#00d4ff" stroke-width="1.5" opacity="0.3" fill="none"/>
+</svg>

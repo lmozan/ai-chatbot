@@ -1,0 +1,8 @@
+backend/venv/
+backend/chroma_db/
+backend/storage/
+backend/pycache/
+backend/.env
+frontend/node_modules/
+frontend/.next/
+.DS_Store
